@@ -78,8 +78,8 @@ def RXCD(mother_genotype : str, father_genotype : str): # Recessive X Chromosome
 
 # Example
 if __name__ == "__main__":
-   m = str(input("Enter Allele of a mother (Example = AA, Aa, aa)\t: ")) # Can input only 2 len
-   f = str(input("Enter Allele of a father (Example = A, a)\t\t: ")) # Can input only 1 len
+   m = str(input("Enter genotype of a mother (Example = AA, Aa, aa)\t: ")) # Can input only 2 len
+   f = str(input("Enter genotype of a father (Example = A, a)\t\t: ")) # Can input only 1 len
    result = RXCD(m, f)
    print(next(result))
    print(next(result))
