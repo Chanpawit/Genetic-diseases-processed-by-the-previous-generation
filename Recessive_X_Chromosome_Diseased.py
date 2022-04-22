@@ -1,7 +1,7 @@
 def RXCD(mother_genotype : str, father_genotype : str): # Recessive X Chromosome Diseased
-   if len(father_allele) > 1:
+   if len(father_genotype) > 1:
       raise Exception("Father genotype must have only 1 word")
-   if len(mother_allele) > 2 or len(mother_allele) == 1:
+   if len(mother_genotype) > 2 or len(mother_genotype) == 1:
       raise Exception("Mother genotype must have only 2 words")
 
    # division alleles of mother and father
@@ -78,8 +78,8 @@ def RXCD(mother_genotype : str, father_genotype : str): # Recessive X Chromosome
 
 # Example
 if __name__ == "__main__":
-   m = str(input("Enter genotype of a mother (Example = AA, Aa, aa)\t: ")) # Can input only 2 len
-   f = str(input("Enter genotype of a father (Example = A, a)\t\t: ")) # Can input only 1 len
+   m = str(input("Enter Allele of a mother (Example = AA, Aa, aa)\t: ")) # Can input only 2 len
+   f = str(input("Enter Allele of a father (Example = A, a)\t\t: ")) # Can input only 1 len
    result = RXCD(m, f)
    print(next(result))
    print(next(result))
